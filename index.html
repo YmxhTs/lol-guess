@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>猜英雄 · 线索阶梯 · 英雄联盟猜谜游戏（125 位英雄 · 离线可玩）</title>
+<meta name="description" content="英雄联盟猜英雄游戏：通过 8 级渐进线索一步步推理出神秘英雄，支持每日一题与自由练习，内置 125 个英雄中文档案与图鉴。">
+<meta name="keywords" content="英雄联盟,猜英雄,lol猜谜,英雄联盟图鉴,lol英雄资料,线索猜谜游戏,loldle中文版,英雄联盟小游戏">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://USERNAME.github.io/REPO/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="猜英雄 · 线索阶梯 · 英雄联盟猜谜游戏（125 位英雄 · 离线可玩）">
+<meta property="og:description" content="英雄联盟猜英雄游戏：通过 8 级渐进线索一步步推理出神秘英雄，支持每日一题与自由练习，内置 125 个英雄中文档案与图鉴。">
+<meta property="og:url" content="https://USERNAME.github.io/REPO/">
+<meta property="og:site_name" content="猜英雄 · 线索阶梯">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="猜英雄 · 线索阶梯 · 英雄联盟猜谜游戏（125 位英雄 · 离线可玩）">
+<meta name="twitter:description" content="英雄联盟猜英雄游戏：通过 8 级渐进线索一步步推理出神秘英雄，支持每日一题与自由练习，内置 125 个英雄中文档案与图鉴。">
+<style>
+  :root{--gold:#C8A45C;--navy:#1E2A44;--bg:#F7F8FA;--body:#1F2937;--muted:#6B7280;}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--body);
+    font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei","Helvetica Neue",Arial,sans-serif;
+    line-height:1.75;-webkit-font-smoothing:antialiased}
+  a{color:var(--navy);text-decoration:none}
+  a:hover{color:var(--gold)}
+  .wrap{max-width:860px;margin:0 auto;padding:0 20px}
+  header{background:linear-gradient(135deg,#1E2A44 0%,#2b3b5c 100%);color:#fff;padding:22px 0}
+  header .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+  header a{color:#fff}
+  .logo{font-size:19px;font-weight:800;letter-spacing:.5px}
+  .logo span{color:var(--gold)}
+  nav{display:flex;gap:16px;font-size:14px;flex-wrap:wrap}
+  main{padding:28px 0 40px}
+  h1{font-size:27px;margin:0 0 14px;line-height:1.35}
+  h2{font-size:20px;margin:30px 0 12px;padding-left:11px;border-left:4px solid var(--gold)}
+  h3{font-size:16px;margin:20px 0 8px}
+  .card{background:#fff;border-radius:16px;padding:20px;box-shadow:0 1px 3px rgba(16,24,40,.06);margin-bottom:16px}
+  .lead{font-size:16px;color:#374151}
+  .btn{display:inline-block;background:var(--gold);color:#fff!important;font-weight:700;
+    padding:13px 26px;border-radius:14px;font-size:16px}
+  .btn:hover{background:#b8934c}
+  .btn.ghost{background:#fff;color:var(--navy)!important;border:2px solid #E5E7EB}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px}
+  .chip{display:block;background:#fff;border-radius:12px;padding:11px 13px;font-size:14px;
+    box-shadow:0 1px 2px rgba(16,24,40,.05)}
+  .chip b{display:block;font-size:15px}
+  .chip small{color:var(--muted);font-size:12px}
+  table{width:100%;border-collapse:collapse;font-size:14px}
+  td,th{padding:9px 10px;border-bottom:1px solid #EEF0F3;text-align:left}
+  th{width:96px;color:var(--muted);font-weight:600}
+  .plaque{height:96px;border-radius:16px;display:flex;align-items:center;justify-content:center;
+    color:#fff;font-size:38px;font-weight:900;margin-bottom:14px}
+  .quote{background:#FFFDF7;border-left:4px solid var(--gold);padding:11px 14px;border-radius:0 10px 10px 0;
+    margin:8px 0;color:#4B5563;font-size:14px}
+  .tag{display:inline-block;background:#EEF2F7;color:var(--navy);border-radius:999px;
+    padding:3px 11px;font-size:12px;margin:0 6px 6px 0}
+  footer{background:#1E2A44;color:#9CA3AF;padding:22px 0;font-size:13px;text-align:center}
+  footer a{color:#C8A45C}
+  .crumbs{font-size:13px;color:var(--muted);margin-bottom:12px}
+  .crumbs a{color:var(--muted)}
+  .list{columns:2;column-gap:24px;font-size:14px}
+  .list a{display:block;padding:2px 0}
+  @media(max-width:640px){h1{font-size:22px}.list{columns:1}}
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","name":"猜英雄 · 线索阶梯","url":"https://USERNAME.github.io/REPO/","description":"英雄联盟猜英雄游戏：通过 8 级渐进线索一步步推理出神秘英雄，支持每日一题与自由练习，内置 125 个英雄中文档案与图鉴。","inLanguage":"zh-CN"},{"@type":"VideoGame","name":"猜英雄 · 线索阶梯","description":"英雄联盟猜英雄游戏：通过 8 级渐进线索一步步推理出神秘英雄，支持每日一题与自由练习，内置 125 个英雄中文档案与图鉴。","genre":"猜谜游戏","playMode":"SinglePlayer","gamePlatform":"Web Browser","numberOfPlayers":1}]}</script>
+</head>
+<body>
+<header><div class="wrap">
+  <div class="logo">猜<span>英雄</span> · 线索阶梯</div>
+  <nav>
+    <a href="../index.html">首页</a>
+    <a href="../game/">开始游戏</a>
+    <a href="./index.html">英雄图鉴</a>
+  </nav>
+</div></header>
+<main><div class="wrap">
+
+<h1>英雄联盟猜英雄 · 线索阶梯</h1>
+<p class="lead">一个纯前端、离线可玩的英雄联盟猜谜游戏。系统会一位一位地放出线索，从阵营、种族一路递进到台词与名字笔画，你要在 <b>8 次机会</b>内推理出这位神秘英雄到底是谁。内置 <b>125 个英雄</b>的完整中文档案。</p>
+<p style="margin:22px 0"><a class="btn" href="./game/">立即开始游戏</a> &nbsp; <a class="btn ghost" href="./heroes/index.html">浏览英雄图鉴</a></p>
+
+<div class="card">
+<h2>怎么玩</h2>
+<p>开局系统会免费给出前两条线索，帮你确定大致范围。之后每提交一次错误猜测，系统会生成一份「契合度反馈」，告诉你猜的那位英雄在哪些维度上对上了。线索是逐步收紧的，越往后越接近点名。</p>
+<table>
+<tr><th>L1</th><td><b>出身何处</b> — 英雄所属阵营 / 地区</td></tr><tr><th>L2</th><td><b>何方神圣</b> — 种族与性别</td></tr><tr><th>L3</th><td><b>战斗定位</b> — 职业标签（坦克 / 战士 / 刺客 / 法师 / 射手 / 辅助）</td></tr><tr><th>L4</th><td><b>常驻战场</b> — 常见分路（上单 / 打野 / 中单 / 下路射手 / 辅助）</td></tr><tr><th>L5</th><td><b>作战方式</b> — 伤害类型、攻击距离、资源消耗</td></tr><tr><th>L6</th><td><b>登场年代</b> — 上线年份与蓝色精粹售价</td></tr><tr><th>L7</th><td><b>称号与绝技</b> — 英雄称号与终极技（R）名称</td></tr><tr><th>L8</th><td><b>最后通牒</b> — 经典台词、名字字数与首字</td></tr>
+</table>
+</div>
+
+<div class="card">
+<h2>双轨解锁：省线索还是保命中率，你选</h2>
+<p><b>被动轨</b>：每累计 2 次错误猜测，自动免费解锁 1 条线索，但最多只送到第 6 级。<br>
+<b>主动轨</b>：随时可以点按钮主动解锁下一条，每次扣 10 分，可以一路开到第 8 级的终极线索。</p>
+<p>也就是说，光靠试错最多只能拿到第 6 级线索，第 7、8 级这种近乎点名的提示必须付出分数代价——这正是「少用线索换高分」的策略空间所在。</p>
+</div>
+
+<div class="card">
+<h2>两种模式</h2>
+<h3>线索阶梯（主模式）</h3>
+<p>先给线索再猜，8 次机会，适合一步步推理。</p>
+<h3>属性对决（附加模式）</h3>
+<p>沿用 Loldle 的玩法：盲猜启动，提交后展示阵营、定位、分路、伤害类型、攻击距离、上线年份、皮肤数共 7 个字段的对比网格，年份与皮肤数还会用箭头提示答案偏大还是偏小，6 次机会。</p>
+</div>
+
+<div class="card">
+<h2>英雄图鉴（125 位）</h2>
+<p>按阵营查看，点击进入可看完整档案：技能、台词、上线年份、售价与背景。</p>
+<h3>按阵营</h3>
+<div class="grid">
+<a class="chip" href="./heroes/index.html#艾欧尼亚"><b>艾欧尼亚</b><small>17 位英雄</small></a><a class="chip" href="./heroes/index.html#德玛西亚"><b>德玛西亚</b><small>13 位英雄</small></a><a class="chip" href="./heroes/index.html#弗雷尔卓德"><b>弗雷尔卓德</b><small>13 位英雄</small></a><a class="chip" href="./heroes/index.html#诺克萨斯"><b>诺克萨斯</b><small>12 位英雄</small></a><a class="chip" href="./heroes/index.html#恕瑞玛"><b>恕瑞玛</b><small>11 位英雄</small></a><a class="chip" href="./heroes/index.html#祖安"><b>祖安</b><small>10 位英雄</small></a><a class="chip" href="./heroes/index.html#暗影岛"><b>暗影岛</b><small>8 位英雄</small></a><a class="chip" href="./heroes/index.html#虚空之地"><b>虚空之地</b><small>8 位英雄</small></a><a class="chip" href="./heroes/index.html#皮尔特沃夫"><b>皮尔特沃夫</b><small>7 位英雄</small></a><a class="chip" href="./heroes/index.html#巨神峰"><b>巨神峰</b><small>7 位英雄</small></a><a class="chip" href="./heroes/index.html#比尔吉沃特"><b>比尔吉沃特</b><small>7 位英雄</small></a><a class="chip" href="./heroes/index.html#以绪塔尔"><b>以绪塔尔</b><small>5 位英雄</small></a><a class="chip" href="./heroes/index.html#班德尔城"><b>班德尔城</b><small>4 位英雄</small></a><a class="chip" href="./heroes/index.html#流浪无归属"><b>流浪无归属</b><small>3 位英雄</small></a><a class="chip" href="./heroes/index.html#卡玛维亚"><b>卡玛维亚</b><small>1 位英雄</small></a>
+</div>
+<h3>按职业</h3>
+<div class="grid">
+<a class="chip" href="./heroes/index.html#cls-战士"><b>战士</b><small>34 位英雄</small></a><a class="chip" href="./heroes/index.html#cls-法师"><b>法师</b><small>26 位英雄</small></a><a class="chip" href="./heroes/index.html#cls-射手"><b>射手</b><small>24 位英雄</small></a><a class="chip" href="./heroes/index.html#cls-坦克"><b>坦克</b><small>19 位英雄</small></a><a class="chip" href="./heroes/index.html#cls-刺客"><b>刺客</b><small>13 位英雄</small></a><a class="chip" href="./heroes/index.html#cls-辅助"><b>辅助</b><small>9 位英雄</small></a>
+</div>
+</div>
+
+<div class="card">
+<h2>常见问题</h2>
+<h3>每天的题目会变吗？</h3><p style="margin:0">会。默认进入「每日一题」，谜底按日期换算，同一天所有人拿到同一题，跨天自动更换。想无限玩可以切换到「自由练习」模式。</p><h3>线索是怎么解锁的？</h3><p style="margin:0">开局免费给前两条。之后每累计 2 次错误猜测会自动补 1 条（免费，最多到第 6 级）；也可以花 10 分主动解锁下一条，一直开到第 8 级。</p><h3>契合度百分比是什么意思？</h3><p style="margin:0">系统按阵营、种族、性别、职业、分路、伤害类型、攻击距离、资源、上线年份共 9 个维度，比对你的猜测与谜底，吻合比例就是契合度。只会显示你已经解锁的那几个维度，避免剧透。</p><h3>分数和星级怎么算？</h3><p style="margin:0">初始 100 分，主动解锁一条线索扣 10 分，每次错误猜测扣 5 分；第一次就猜中额外加 20 分（上限 120）。按最终分数评 1 到 5 星，从「蒙对了」到「洞若观火」。</p><h3>需要联网或安装吗？</h3><p style="margin:0">不需要。整个游戏是纯前端应用，英雄数据全部内置，断网也能玩，手机浏览器打开同样适配。</p>
+</div>
+
+<div class="card">
+<h2>部分英雄速览</h2>
+<div class="grid"><a class="chip" href="./heroes/akali.html"><b>阿卡丽</b><small>离群之刺</small></a><a class="chip" href="./heroes/ahri.html"><b>阿狸</b><small>九尾妖狐</small></a><a class="chip" href="./heroes/amumu.html"><b>阿木木</b><small>殇之木乃伊</small></a><a class="chip" href="./heroes/azir.html"><b>阿兹尔</b><small>沙漠皇帝</small></a><a class="chip" href="./heroes/ekko.html"><b>艾克</b><small>时间刺客</small></a><a class="chip" href="./heroes/anivia.html"><b>艾尼维亚</b><small>冰晶凤凰</small></a><a class="chip" href="./heroes/irelia.html"><b>艾瑞莉娅</b><small>刀锋舞者</small></a><a class="chip" href="./heroes/ashe.html"><b>艾希</b><small>寒冰射手</small></a><a class="chip" href="./heroes/annie.html"><b>安妮</b><small>黑暗之女</small></a><a class="chip" href="./heroes/ornn.html"><b>奥恩</b><small>山隐之焰</small></a><a class="chip" href="./heroes/olaf.html"><b>奥拉夫</b><small>狂战士</small></a><a class="chip" href="./heroes/orianna.html"><b>奥莉安娜</b><small>发条魔灵</small></a><a class="chip" href="./heroes/bard.html"><b>巴德</b><small>星界游神</small></a><a class="chip" href="./heroes/poppy.html"><b>波比</b><small>圣锤之毅</small></a><a class="chip" href="./heroes/blitzcrank.html"><b>布里茨</b><small>蒸汽机器人</small></a><a class="chip" href="./heroes/braum.html"><b>布隆</b><small>弗雷尔卓德之心</small></a><a class="chip" href="./heroes/thresh.html"><b>锤石</b><small>魂锁典狱长</small></a><a class="chip" href="./heroes/diana.html"><b>戴安娜</b><small>皎月女神</small></a><a class="chip" href="./heroes/darius.html"><b>德莱厄斯</b><small>诺克萨斯之手</small></a><a class="chip" href="./heroes/draven.html"><b>德莱文</b><small>荣耀行刑官</small></a><a class="chip" href="./heroes/illaoi.html"><b>俄洛伊</b><small>海兽祭司</small></a><a class="chip" href="./heroes/aphelios.html"><b>厄斐琉斯</b><small>残月之肃</small></a><a class="chip" href="./heroes/urgot.html"><b>厄加特</b><small>无畏战车</small></a><a class="chip" href="./heroes/missfortune.html"><b>厄运小姐</b><small>赏金猎人</small></a></div>
+<p style="margin-top:12px"><a href="./heroes/index.html">查看完整图鉴（125 位）→</a></p>
+</div>
+
+</div></main>
+<footer><div class="wrap">
+  猜英雄 · 线索阶梯 · 英雄联盟粉丝向猜谜练习项目<br>
+  英雄名称、称号、台词等文本版权归 Riot Games 所有，本站仅作学习交流用途。
+</div></footer>
+</body>
+</html>
