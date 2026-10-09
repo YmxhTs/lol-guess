@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://USERNAME.github.io/REPO/sitemap.xml
+Sitemap: https://YmxhTs.github.io/lol-guess/sitemap.xml
