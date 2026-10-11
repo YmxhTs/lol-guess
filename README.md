@@ -68,3 +68,15 @@ npm run build:pages   # 构建 + 重新生成全部静态页面
 ## 许可
 
 游戏数据版权归 Riot Games 所有，本项目仅为非营利粉丝作品，与 Riot Games 无官方关联。
+
+## 访问量与游玩数据分析
+
+站点为纯静态 GitHub Pages，GitHub 不提供访问日志，玩家数据默认只存在浏览器本地。要集中查看访问量与游玩趋势，可接入轻量分析工具：
+
+- 配置位于 `site.config.json` 的 `analytics` 字段，**默认 `enabled: false`**（不注入任何外部脚本，保持运行时零请求）。
+- 支持两种 provider：**GoatCounter**（免费托管，推荐）与 **Umami**（可自托管，数据完全自控）。
+- 启用步骤：① 到对应平台注册并拿到站点代码；② 填 `code`、`provider`，必要时填 Umami 的 `endpoint`；③ 把 `enabled` 改为 `true`；④ 重新执行 `npm run build:pages`。
+- 自动收集：页面访问量（PV/UV、来源、设备、热门页面）+ 游戏事件（`round_start` 开局、`round_end` 结算，含模式 / 档位 / 结果 / 用掉的猜测次数 / 答案英雄）。
+- 事件经 `src/lib/analytics.ts` 上报；该模块在 `enabled: false` 时为空操作，离线或被拦截时静默失败，不影响游戏。
+
+> 注：本项目用户主要在境内，GoatCounter 服务器在境外，可能存在访问延迟；若需境内稳定或数据完全自控，建议改用自托管 Umami（可放在同厂商轻量服务器）。
